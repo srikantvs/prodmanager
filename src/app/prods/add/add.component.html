@@ -1,0 +1,74 @@
+<a class="btn btn-secondary mx-3" routerLink="/prods/test">Back</a>
+<hr />
+
+<div class="row" *ngIf="productXX != null">
+    <div class="col-sm-5">
+        <img [src]="productXX.pImagePath" class="w-75 h-75" alt="" *ngIf="productXX.pImagePath!='' "/>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-6">
+        <form class="rounded shadow py-3 px-2 bg-white" #prodForm="ngForm" (ngSubmit)="onSubmit(prodForm)">
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col" colspan="2" style="text-align: center">
+                            Product Details
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>
+                            <input type="text" class="form-control" id="name" placeholder="Name" required
+                                [(ngModel)]="productXX.pName" name="pName" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Description</td>
+                        <td>
+                            <textarea class="form-control" id="desc" aria-describedby="desc" placeholder="Description"
+                                required [(ngModel)]="productXX.pDescription" name="pDescription"></textarea>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Manufacturer</td>
+                        <td>
+                            <input type="text" class="form-control" id="manufacturer" placeholder="Manufacturer"
+                                required [(ngModel)]="productXX.pManufacturer" name="pManufacturer" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Price</td>
+                        <td>
+                            <input type="number" class="form-control" id="price" placeholder="Price" required
+                                [(ngModel)]="productXX.pPrice" name="pPrice" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Quantity</td>
+                        <td>
+                            <input type="number" class="form-control" id="qty" placeholder="Gender" required
+                                [(ngModel)]="productXX.pQuantity" name="pQuantity" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>Image Path</td>
+                        <td>
+                            <input type="string" class="form-control" id="img" placeholder="Enter Image path" required
+                                [(ngModel)]="productXX.pImagePath" name="pImagePath" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <button type="submit" [disabled]="!prodForm.valid" class="btn btn-success w-100">
+                Update
+            </button>
+        </form>
+    </div>
+</div>

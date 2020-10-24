@@ -1,0 +1,9 @@
+/* when both of them are there in the input then only apply this style by default it will have ng-invalid and ng-untouched once the user touches the form and  the ng-invlid is there then this style wil be applied*/
+input.ng-touched.ng-invalid {
+  border: 1px solid red;
+  box-shadow: 0 0 13px #ff00004f;
+}
+
+table td{
+  padding:5px;
+}

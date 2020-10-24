@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+/* html{
+    margin: 15px;
+} */
+/* body { background-color: #bdcad4 ;} */
+
+html body {
+    background-color: #bdcad4 ;
+
+}
+
+.pink-background{
+   
+    background-color: rgb(154, 243, 20);
+    font-weight: bold;
+    
+}

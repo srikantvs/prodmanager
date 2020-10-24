@@ -1,0 +1,114 @@
+<div *ngIf="!loginService.userLoggedIn">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <form class="rounded shadow bg-white py-3 px-5" #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+          <div class="form-group">
+            <label for="emailId">Email address<span style="color: red">*</span></label>
+            <input type="email" class="form-control" id="emailId" aria-describedby="emailHelp" placeholder="Enter email"
+              required ngModel name="email" email #userEmail="ngModel" />
+            <small class="text-danger" *ngIf="!userEmail.valid && userEmail.touched">Please enter valid email</small>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="password">Password<span style="color: red">*</span></label>
+            <input type="password" autocomplete="" class="form-control" id="password" placeholder="Password" required
+              ngModel name="password" />
+          </div>
+          <button type="submit" [disabled]="!userForm.valid" class="btn btn-success" style="width: 100%">
+            Submit
+          </button>
+          <p class="text-center"><a routerLink="/signup" routerLinkActive="pink-background rounded">Create an Account</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="loginService.userLoggedIn">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-sm-6 rounded shadow py-3 bg-white">
+        
+        <table class="table">
+          <thead class="thead-light">
+            <tr>
+              <th scope="col" colspan="2" style="text-align: center;">User Details</th>                             
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr>
+             
+              <td>User ID</td>
+              <td>{{curUser.id}}</td>
+            </tr> -->
+            <tr>
+              <!-- <th scope="row">2</th> -->
+              <td>Name</td>
+              <td>{{curUser.name}}</td>
+            </tr>
+            <tr>
+              <!-- <th scope="row">3</th> -->
+              <td>Email</td>
+              <td>{{curUser.email}}</td>
+            </tr>
+
+            <tr>
+              <!-- <th scope="row">4</th> -->
+              <td>Age</td>
+              <td>{{curUser.age}}</td>
+            </tr>
+
+
+            <tr>
+              <!-- <th scope="row">5</th> -->
+              <td>Gender</td>
+              <td>{{curUser.gender}}</td>
+            </tr>
+
+            <tr>
+              <!-- <th scope="row">6</th> -->
+              <td>Mobile</td>
+              <td>+91-{{curUser.mobile}}</td>
+            </tr>
+
+            <tr>
+              <!-- <th scope="row">7</th> -->
+              <td>Address</td>
+              <td>{{curUser.address}}</td>
+            </tr>
+
+            <tr>
+              <!-- <th scope="row">8</th> -->
+              <td>City</td>
+              <td>{{curUser.city}}</td>
+            </tr>
+
+            
+            <tr>
+              <!-- <th scope="row">9</th> -->
+              <td>State</td>
+              <td>{{curUser.state}}</td>
+            </tr>
+
+            <tr>
+              <!-- <th scope="row">10</th> -->
+              <td>Country</td>
+              <td>{{curUser.country}}</td>
+            </tr>
+
+            <tr>
+              <!-- <th scope="row">11</th> -->
+              <td>Pincode</td>
+              <td>{{curUser.pincode}}</td>
+            </tr>
+
+          </tbody>
+        </table>
+        <a class="btn btn-danger" style="width: 100%;" routerLink="/logout">Logout</a>
+      </div>
+      
+    </div>
+    
+  </div>
+</div>

@@ -1,0 +1,8 @@
+input.ng-touched.ng-invalid {
+    border: 1px solid red;
+    box-shadow: 0 0 13px #ff00004f;
+  }
+
+  table td{
+    padding:5px;
+  }

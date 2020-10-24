@@ -1,0 +1,156 @@
+<div class="row justify-content-center">
+  <div class="col-sm-2">
+    <a class="btn btn-success" routerLink="/prods/add">Add</a>
+  </div>
+  <div class="col-sm-2">
+    <button type="button" class="btn btn-danger">Delete</button>
+  </div>
+  <div class="col-sm-6">
+    <form>
+      <div class="form-group">
+        <input type="text" class="form-control " id="searchItem" aria-describedby="searchItem" placeholder="Search"
+          [(ngModel)]="keyItem" name="search">
+      </div>
+    </form>
+  </div>
+
+  <div class="col-sm-2">
+    <div class="dropdown">
+      <button class="btn btn-light text-center" type="button" id="dropdownMenu2" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        <svg width="25px" height="25px" viewBox="0 0 16 16" class="bi bi-filter-square-fill" fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm.5 5a.5.5 0 0 0 0 1h11a.5.5 0 0 0 0-1h-11zM4 8.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm2 3a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5z" />
+        </svg>
+      </button>
+      <div class="dropdown-menu px-3 bg-white" aria-labelledby="dropdownMenu2">
+        <form>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" style="width: 20px; height:20px ;" id="isDescChecked"
+              name="isDescChecked" [(ngModel)]="isDescChecked">
+            <span class="pl-3">Description</span>
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" style="width: 20px; height:20px ;" id="isManuChecked"
+              name="isManuChecked" [(ngModel)]="isManuChecked">
+            <span class="pl-3">Manufacturer</span>
+          </div>
+
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" style="width: 20px; height:20px ;" id="isPriceChecked"
+              name="isPriceChecked" [(ngModel)]="ispriceChecked">
+            <span class="pl-3">Price</span>
+          </div>
+
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" style="width: 20px; height:20px ;" id="isQtyChecked"
+              name="isQtyChecked" [(ngModel)]="isQtyChecked">
+            <span class="pl-3">Quantity</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+
+
+
+<div class="row row-cols-1 row-cols-sm-4">
+  <div class="col my-3 w-100" *ngFor="let product of products | search:keyItem">
+    <div class="card h-100 rounded shadow px-2 py-2">
+      <img src="{{ product.pImagePath }}" class="img-thumbnail img-fluid rounded w-50 h-50 mx-auto d-block" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{ product.pName }}</h5>
+        <p class="card-text text-justify text-truncate" *ngIf="isDescChecked"><b>DESC. </b>
+          {{ product.pDescription }}</p>
+      </div>
+      <br>
+      <div class="card-footer clearfix">
+        <p class="card-text" *ngIf="isManuChecked"><span class="font-weight-bold">By &nbsp;:
+            &nbsp;</span>{{product.pManufacturer}}</p>
+        <p class="float-left" *ngIf="ispriceChecked"><span class="font-weight-bold">₹&nbsp;:&nbsp;
+          </span>{{product.pPrice}} </p>
+        <p class="float-right" *ngIf="isQtyChecked"> <span
+            class="font-weight-bold">Quantity&nbsp;:&nbsp;</span>{{product.pQuantity}}</p>
+            <br>
+            <div class="clearfix">
+              <button type="button w-25 h-25" class="btn btn-warning float-right" (click)="editProduct($event,product.id)">Edit</button>
+              <button type="button w-25 h-25" class="btn btn-primary float-left" data-toggle="modal" data-target="#exampleModal"
+                (click)="viewProduct($event,product.id)">View</button>
+            </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{vProduct.pName}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm-5">
+              <img [src]="vProduct.pImagePath" class="w-75 h-75" alt="" />
+            </div>
+            <div class="col-sm-1"></div>
+    
+            <div class="col-sm-6">
+    
+    
+              <table class="table">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col" colspan="2" style="text-align: center">
+                      Product Details
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Name</td>
+                    <td> {{vProduct.pName}} </td>
+                  </tr>
+                  <tr>
+                    <td>Description</td>
+                    <td><textarea disabled=true> {{vProduct.pDescription}} </textarea></td>
+                  </tr>
+    
+                  <tr>
+                    <td>Manufacturer</td>
+                    <td> {{vProduct.pManufacturer}} </td>
+                  </tr>
+    
+                  <tr>
+                    <td>Price</td>
+                    <td> {{vProduct.pPrice}} </td>
+                  </tr>
+    
+                  <tr>
+                    <td>Quantity</td>
+                    <td> {{vProduct.pQuantity}} </td>
+                  </tr>
+    
+                  <tr>
+                    <td>Image Path</td>
+                    <td> {{vProduct.pImagePath}} </td>
+                  </tr>
+    
+                </tbody>
+              </table>
+    
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

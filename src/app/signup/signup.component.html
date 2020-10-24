@@ -1,0 +1,93 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form class="rounded shadow bg-white py-3 px-5" #newUserForm="ngForm" (ngSubmit)="onSubmit(newUserForm)">
+
+                <div class="form-group">
+                    <label for="id">UserID<span style="color: red">*</span></label>
+                    <input type="text" class="form-control" id="id" placeholder="User ID"
+                        required ngModel name="id" />
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Name<span style="color: red">*</span></label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name"
+                        required ngModel name="name" />
+                </div>
+
+
+                <div class="form-group">
+                    <label for="email">Email address<span style="color: red">*</span></label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                        placeholder="Enter email" required ngModel name="email" email #userEmail="ngModel" />
+                    <small class="text-danger" *ngIf="!userEmail.valid && userEmail.touched">Please enter valid
+                        email</small>
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="password">Password<span style="color: red">*</span></label>
+                    <input type="password" class="form-control" id="password" placeholder="Password" required
+                      ngModel name="password" />
+                  </div>
+
+
+                  <div class="form-group">
+                    <label for="age">Age<span style="color: red">*</span></label>
+                    <input type="number" class="form-control" id="age" placeholder="Age" required
+                      ngModel name="age" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="gender">Gender<span style="color: red">*</span></label>
+                    <input type="text" class="form-control" id="gender" placeholder="Gender" required
+                      ngModel name="gender" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="mobile">Mobile<span style="color: red">*</span></label>
+                    <input type="text" class="form-control" id="mobile" placeholder="Mobile" required
+                      ngModel name="mobile" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="address">Address<span style="color: red">*</span></label>
+                    <input type="text" class="form-control" id="address" placeholder="Address" required
+                      ngModel name="address" />
+                  </div>
+
+
+
+                  <div class="form-group">
+                    <label for="city">City<span style="color: red">*</span></label>
+                    <input type="text" class="form-control" id="city" placeholder="City" required
+                      ngModel name="city" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="state">State<span style="color: red">*</span></label>
+                    <input type="text" class="form-control" id="state" placeholder="State" required
+                      ngModel name="state" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="country">Country<span style="color: red">*</span></label>
+                    <input type="text" class="form-control" id="country" placeholder="Country" required
+                      ngModel name="country" />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="pincode">Pincode<span style="color: red">*</span></label>
+                    <input type="text" class="form-control" id="pincode" placeholder="Pincode" required
+                      ngModel name="pincode" />
+                  </div>
+
+                <button type="submit" [disabled]="!newUserForm.valid" class="btn btn-success" style="width: 100%">
+                    Sign Up
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

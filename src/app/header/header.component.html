@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg navbar-light shadow" style="background-color: #84a9c7;">
+    <a class="navbar-brand custo" routerLink="/about"><img src="/assets/logo.jpg" class="d-inline-block" alt="" width="100" height="50">Prod Manager</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link px-3" routerLink="/about" routerLinkActive="pink-background rounded">About</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link px-3" routerLink="/prods/test" routerLinkActive="pink-background rounded">Products</a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link  px-3" routerLink="/analytics" routerLinkActive="pink-background rounded">Analytics</a>
+        </li>
+
+    </ul>
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link px-3" routerLink="/login" routerLinkActive="pink-background rounded" *ngIf="!loginService.userLoggedIn">Sign In</a>
+        </li>
+
+        <li class="nav-item active">
+          <a class="nav-link px-3" routerLink="/login" routerLinkActive="pink-background rounded" *ngIf="loginService.userLoggedIn"> {{userName}} </a>
+        </li>
+
+        <!-- <li class="nav-item active">
+          <a class="nav-link px-3" routerLink="/logout" routerLinkActive="pink-background rounded" *ngIf="loginService.userLoggedIn">Logout</a>
+        </li> -->
+
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/signup" routerLinkActive="pink-background rounded"> Sign Up </a>
+        </li>
+
+       
+      </ul>
+
+      <!-- <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+        <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+      <!-- </form> -->
+    </div>
+  </nav>
+ 

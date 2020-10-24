@@ -1,0 +1,128 @@
+{
+  "users": [
+    {
+      "name": "Srikant V S",
+      "email": "srikantvs26@gmail.com",
+      "password": "Test@123",
+      "age": 23,
+      "gender": "M",
+      "mobile": "7894561235",
+      "address": "Victoria Layout",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "country": "India",
+      "pincode": "560047"
+    },
+    {
+      "name": "John Doe",
+      "email": "johndoe@gmail.com",
+      "password": "John@123",
+      "age": 21,
+      "gender": "M",
+      "mobile": "123456789",
+      "address": "Outer Road",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "country": "India",
+      "pincode": "560001"
+    },
+    {
+      "id": "will_buyers",
+      "name": "Will Buyers",
+      "email": "willbuyers@gmail.com",
+      "password": "will",
+      "age": 10,
+      "gender": "M",
+      "mobile": "789456123",
+      "address": "Hawkins",
+      "city": "LA",
+      "state": "Philly",
+      "country": "USA",
+      "pincode": "56457"
+    },
+    {
+      "id": "sdf",
+      "name": "Geetanjali V S",
+      "email": "nsvasanta7@gmail.com",
+      "password": "fdsg",
+      "age": 55,
+      "gender": "fdgdf",
+      "mobile": "+919731991744",
+      "address": "Budihal",
+      "city": "Gadag",
+      "state": "Karnataka",
+      "country": "India",
+      "pincode": "582118"
+    },
+    {
+      "id": "vedz.krish",
+      "name": "Vedanth",
+      "email": "vedz.krish@gmail.com",
+      "password": "Test@123",
+      "age": 78,
+      "gender": "F",
+      "mobile": "231332132131",
+      "address": "Somewhere",
+      "city": "Bangalore",
+      "state": "Karnataka",
+      "country": "India",
+      "pincode": "560047"
+    }
+  ],
+  "products": [
+    {
+      "pName": "Office Table",
+      "pDescription": "Expand the storage capabilities of your workspace with this budget-friendly desk.",
+      "pManufacturer": "Induscraft",
+      "pPrice": 15000,
+      "pQuantity": 5,
+      "pImagePath": "/assets/table.jpeg",
+      "id": 1
+    },
+    {
+      "pName": "Torch",
+      "pDescription": "Perfect lighting solution for any kind of search & rescue operations.",
+      "pManufacturer": "Philips",
+      "pPrice": 99,
+      "pQuantity": 125,
+      "pImagePath": "/assets/torch.jpeg",
+      "id": 3
+    },
+    {
+      "id": 5,
+      "pName": "Mouse",
+      "pDescription": "Awesome mouse for gaming purpose",
+      "pImagePath": "/assets/mouse.jpeg",
+      "pManufacturer": "Logitech",
+      "pPrice": 599,
+      "pQuantity": 10
+    },
+    {
+      "id": 6,
+      "pName": "Headphones",
+      "pDescription": "Sony Headphone for music lovers, Awesome Bass quality.",
+      "pImagePath": "/assets/headphones.jpeg",
+      "pManufacturer": "Sony",
+      "pPrice": 2100,
+      "pQuantity": 7
+    },
+    {
+      "id": 7,
+      "pName": "Bag",
+      "pDescription": "Great bag for outdoor and adventure purpose. Very lightweight",
+      "pImagePath": "/assets/bag.jpeg",
+      "pManufacturer": "American Tourister",
+      "pPrice": 1500,
+      "pQuantity": 30
+    },
+    {
+      "id": 8,
+      "pName": "Camera",
+      "pDescription": "Take this travel-friendly camera on your trips",
+      "pImagePath": "/assets/camera.jpeg",
+      "pManufacturer": "Canon",
+      "pPrice": 16499,
+      "pQuantity": 8
+    }
+  ]
+}
