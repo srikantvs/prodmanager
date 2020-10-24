@@ -27,34 +27,6 @@
       "pincode": "560001"
     },
     {
-      "id": "will_buyers",
-      "name": "Will Buyers",
-      "email": "willbuyers@gmail.com",
-      "password": "will",
-      "age": 10,
-      "gender": "M",
-      "mobile": "789456123",
-      "address": "Hawkins",
-      "city": "LA",
-      "state": "Philly",
-      "country": "USA",
-      "pincode": "56457"
-    },
-    {
-      "id": "sdf",
-      "name": "Geetanjali V S",
-      "email": "nsvasanta7@gmail.com",
-      "password": "fdsg",
-      "age": 55,
-      "gender": "fdgdf",
-      "mobile": "+919731991744",
-      "address": "Budihal",
-      "city": "Gadag",
-      "state": "Karnataka",
-      "country": "India",
-      "pincode": "582118"
-    },
-    {
       "id": "vedz.krish",
       "name": "Vedanth",
       "email": "vedz.krish@gmail.com",
