@@ -23,7 +23,19 @@ describe('HeaderComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create HeaderComponent', () => {
     expect(component).toBeTruthy();
   });
+
+
+  it('check if application name is redered properly ', () => {
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('#appName').textContent).toContain('Prod Manager');
+  });
+
+  it('check header userName', () => {
+    expect(component.userName).toEqual('Sign In');
+  });
+
 });

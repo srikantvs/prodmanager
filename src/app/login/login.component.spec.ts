@@ -30,4 +30,11 @@ describe('LoginComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('check  userName', () => {
+    localStorage.setItem('username', 'srikantvs');
+    fixture.detectChanges();
+    expect(component.userName).toEqual('srikantvs');
+  });
+
 });

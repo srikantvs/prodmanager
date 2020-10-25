@@ -22,4 +22,11 @@ describe('AboutComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('check if about us is rendered properly ', () => {
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('#aboutUs').textContent).toContain('About Us');
+  });
+
 });

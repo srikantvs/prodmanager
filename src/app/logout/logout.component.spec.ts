@@ -26,4 +26,11 @@ describe('LogoutComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('check if user logged out message displayed ', () => {
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('h3').textContent).toContain('You are logged out.');
+  });
+
 });

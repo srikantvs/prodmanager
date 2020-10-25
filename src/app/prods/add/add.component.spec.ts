@@ -26,4 +26,11 @@ describe('AddComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('check if details is redered properly ', () => {
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('#pDetails').textContent).toContain('Product Details');
+  });
+
 });
