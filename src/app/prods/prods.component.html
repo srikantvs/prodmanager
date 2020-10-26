@@ -67,19 +67,21 @@
           {{ product.pDescription }}</p>
       </div>
       <br>
-      <div class="card-footer clearfix">
+      <div class="card-footer px-0 py-0">
         <p class="card-text" *ngIf="isManuChecked"><span class="font-weight-bold">By &nbsp;:
             &nbsp;</span>{{product.pManufacturer}}</p>
         <p class="float-left" *ngIf="ispriceChecked"><span class="font-weight-bold">₹&nbsp;:&nbsp;
           </span>{{product.pPrice}} </p>
         <p class="float-right" *ngIf="isQtyChecked"> <span
             class="font-weight-bold">Quantity&nbsp;:&nbsp;</span>{{product.pQuantity}}</p>
-            <br>
-            <div class="clearfix">
-              <button type="button w-25 h-25" class="btn btn-warning float-right" (click)="editProduct($event,product.id)">Edit</button>
-              <button type="button w-25 h-25" class="btn btn-primary float-left" data-toggle="modal" data-target="#exampleModal"
-                (click)="viewProduct($event,product.id)">View</button>
-            </div>
+        <br>
+
+      </div>
+      <div class="clearfix">
+        <button type="button w-25 h-25" class="btn btn-warning float-right"
+          (click)="editProduct($event,product.id)">Edit</button>
+        <button type="button w-25 h-25" class="btn btn-primary float-left" data-toggle="modal"
+          data-target="#exampleModal" (click)="viewProduct($event,product.id)">View</button>
       </div>
     </div>
   </div>
@@ -102,10 +104,10 @@
               <img [src]="vProduct.pImagePath" class="w-75 h-75" alt="" />
             </div>
             <div class="col-sm-1"></div>
-    
+
             <div class="col-sm-6">
-    
-    
+
+
               <table class="table">
                 <thead class="thead-light">
                   <tr>
@@ -123,30 +125,30 @@
                     <td>Description</td>
                     <td><textarea disabled=true> {{vProduct.pDescription}} </textarea></td>
                   </tr>
-    
+
                   <tr>
                     <td>Manufacturer</td>
                     <td> {{vProduct.pManufacturer}} </td>
                   </tr>
-    
+
                   <tr>
                     <td>Price</td>
                     <td> {{vProduct.pPrice}} </td>
                   </tr>
-    
+
                   <tr>
                     <td>Quantity</td>
                     <td> {{vProduct.pQuantity}} </td>
                   </tr>
-    
+
                   <tr>
                     <td>Image Path</td>
                     <td> {{vProduct.pImagePath}} </td>
                   </tr>
-    
+
                 </tbody>
               </table>
-    
+
             </div>
           </div>
         </div>
