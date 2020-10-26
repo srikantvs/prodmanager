@@ -34,6 +34,7 @@ describe('LoginComponent', () => {
   it('check  userName', () => {
     localStorage.setItem('username', 'srikantvs');
     fixture.detectChanges();
+    component.userName = localStorage.getItem('username');
     expect(component.userName).toEqual('srikantvs');
   });
 
