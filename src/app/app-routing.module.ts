@@ -4,7 +4,7 @@ import { Route, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
-import { LogoutGuard } from './logout/logout.guard';
+import { LogoutGuard } from './guards/logout.guard';
 import { SignupComponent } from './signup/signup.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
 import { DirtyformGuard } from './guards/dirtyform.guard';

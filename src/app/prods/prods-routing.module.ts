@@ -3,7 +3,7 @@ import { Routes, RouterModule } from "@angular/router";
 
 import { ProdsComponent } from "./prods.component";
 import { EditprodComponent } from "./editprod/editprod.component";
-import { EditGuard } from './edit-guard';
+import { EditGuard } from '../guards/edit-guard';
 import { LoginComponent } from '../login/login.component';
 import { AddComponent } from './add/add.component';
 

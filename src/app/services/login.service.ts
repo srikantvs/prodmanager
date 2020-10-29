@@ -1,9 +1,9 @@
 import { Injectable } from "@angular/core";
-import { HeaderComponent } from './header/header.component';
-import { HeaderService } from './header/header.service';
+import { HeaderComponent } from '../header/header.component';
+import { HeaderService } from '../header/header.service';
 import { BehaviorSubject } from 'rxjs';
 import { UserService } from './user.service';
-import { NewUser } from './models/NewUser';
+import { NewUser } from '../models/NewUser';
 import { Router } from '@angular/router';
 
 @Injectable({

@@ -7,7 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { AboutComponent } from './about/about.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
-import { LoginService } from './login.service';
+import { LoginService } from './services/login.service';
 import { LogoutComponent } from './logout/logout.component';
 import { SignupComponent } from './signup/signup.component';
 import { ChartsModule, ThemeService } from 'ng2-charts';

@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { LoginService } from '../login.service';
+import { LoginService } from '../services/login.service';
 import { ProductService } from '../services/product.service';
 
 describe('LoginComponent', () => {
