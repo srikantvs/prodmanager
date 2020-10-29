@@ -7,6 +7,7 @@ import { LogoutComponent } from './logout/logout.component';
 import { LogoutGuard } from './logout/logout.guard';
 import { SignupComponent } from './signup/signup.component';
 import { AnalyticsComponent } from './analytics/analytics.component';
+import { DirtyformGuard } from './guards/dirtyform.guard';
 
 
 const routes: Route[] = [
@@ -29,7 +30,7 @@ const routes: Route[] = [
   },
   {
     path: 'signup',
-    component: SignupComponent
+    component: SignupComponent,canDeactivate:[DirtyformGuard]
   },
   {
     path: 'analytics',

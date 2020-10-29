@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { NewUser } from '../models/NewUser';
 import { UserService } from '../user.service';
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
-
+  @ViewChild('newUserForm', {static: false}) addUserForm:NgForm;
   constructor(private userService:UserService,private router:Router) { }
 
   ngOnInit() {
