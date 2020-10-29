@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "OnlineDietSystem": {
+    "ProdManager": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/OnlineDietSystem",
+            "outputPath": "dist/ProdManager",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "OnlineDietSystem:build"
+            "browserTarget": "ProdManager:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "OnlineDietSystem:build:production"
+              "browserTarget": "ProdManager:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "OnlineDietSystem:build"
+            "browserTarget": "ProdManager:build"
           }
         },
         "test": {
@@ -113,15 +113,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "OnlineDietSystem:serve"
+            "devServerTarget": "ProdManager:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "OnlineDietSystem:serve:production"
+              "devServerTarget": "ProdManager:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "OnlineDietSystem"
+  "defaultProject": "ProdManager"
 }
