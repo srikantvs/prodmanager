@@ -40,7 +40,6 @@ describe('AnalyticsComponent', () => {
     const compiled = fixture.nativeElement;
     
     expect(compiled.querySelector('#top3').textContent).toContain('Top 3 Products');
-    // expect(compiled.querySelector('#topx').textContent).toContain('Top Products');
   });
 
 });

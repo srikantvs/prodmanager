@@ -23,4 +23,3 @@ describe('Service: userservice', () => {
   }));
 });
 
-// it('should ...', inject([LoginService], (service: LoginService) => {

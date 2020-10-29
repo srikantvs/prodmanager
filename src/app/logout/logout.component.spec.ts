@@ -33,4 +33,10 @@ describe('LogoutComponent', () => {
     expect(compiled.querySelector('h3').textContent).toContain('You are logged out.');
   });
 
+  it('check if back button redered or not', () => {
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('a[type="button"]')).toBeTruthy();
+  });
+
 });

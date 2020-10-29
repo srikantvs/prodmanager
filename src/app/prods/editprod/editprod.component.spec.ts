@@ -39,4 +39,11 @@ describe('EditprodComponent', () => {
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('#noItemExists').textContent).toContain(`Item doesn't exist..`);
   });
+
+  it('check if update button redered or not', () => {
+    component.productXX = new Product();
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('button[type="submit"]')).toBeFalsy();
+  });
 });
