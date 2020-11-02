@@ -52,12 +52,10 @@
 </div>
 <hr>
 
-
-
 <div class="row row-cols-1 row-cols-sm-4">
   <div class="col my-3 w-100" *ngFor="let product of products | search:keyItem">
     <div class="card h-100 rounded shadow px-2 py-2">
-      <img src="{{ product.pImagePath }}" class="img-thumbnail img-fluid rounded w-50 h-50 mx-auto d-block" alt="...">
+      <img src="{{ product.pImagePath }}" style = "width: 100px; height: 100px;" class="img-thumbnail img-fluid rounded mx-auto" alt="...">
       <div class="card-body">
         <h5 class="card-title">{{ product.pName }}</h5>
         <p class="card-text text-justify text-truncate" *ngIf="isDescChecked"><b>DESC. </b>
@@ -72,17 +70,27 @@
         <p class="float-right" *ngIf="isQtyChecked"> <span
             class="font-weight-bold">Quantity&nbsp;:&nbsp;</span>{{product.pQuantity}}</p>
         <br>
-
+        
       </div>
       <div class="clearfix">
+
         <button type="button w-25 h-25" class="btn btn-warning float-right"
           (click)="editProduct($event,product.id)">Edit</button>
+  
+          
+  
         <button type="button w-25 h-25" class="btn btn-primary float-left" data-toggle="modal"
           data-target="#exampleModal" (click)="viewProduct($event,product.id)">View</button>
       </div>
     </div>
+    
   </div>
 </div>
+
+
+
+
+
 
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">

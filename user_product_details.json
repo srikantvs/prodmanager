@@ -39,6 +39,20 @@
       "state": "Karnataka",
       "country": "India",
       "pincode": "560047"
+    },
+    {
+      "id": "1",
+      "name": "geetanjali v s",
+      "email": "geetanjalivs1999@gmail.com",
+      "password": "pure4sure",
+      "age": 21,
+      "gender": "female",
+      "mobile": "8792620980",
+      "address": "#1/12 Victoria road corporation qtrs",
+      "city": "Bengaluru",
+      "state": "karnataka",
+      "country": "india",
+      "pincode": "560047"
     }
   ],
   "products": [
@@ -107,12 +121,30 @@
     },
     {
       "pName": "JK Paper",
-      "pDescription": "best paper for office and home use. enhances printer quality",
+      "pDescription": "best paper for office and home use. Perfect for printing purpose.",
       "pManufacturer": "JK",
       "pPrice": 250,
-      "pQuantity": 3,
+      "pQuantity": 5,
       "pImagePath": "https://5.imimg.com/data5/WK/VR/MY-56183368/jk-copier-paper-500x500.jpg",
       "id": 57
+    },
+    {
+      "pName": "Sun Glasses",
+      "pDescription": "Best suited sun glasses ideal for both men and women provides protection to eyes against harmful sun rays. and looks very stylish.",
+      "pManufacturer": "Ray Ban",
+      "pPrice": 6500,
+      "pQuantity": 20,
+      "pImagePath": "https://5.imimg.com/data5/XF/YL/MY-13324040/ray-ban-aviator-sunglasses-rb3025-001-58-500x500.png",
+      "id": 73
+    },
+    {
+      "pName": "ffd",
+      "pDescription": "fdd",
+      "pManufacturer": "dfdf",
+      "pPrice": 6,
+      "pQuantity": 5,
+      "pImagePath": "https://in-media.apjonlinecdn.com/wysiwyg/Navigation/spectre.png",
+      "id": 38
     }
   ]
 }
