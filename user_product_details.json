@@ -95,6 +95,24 @@
       "pManufacturer": "Canon",
       "pPrice": 16499,
       "pQuantity": 8
+    },
+    {
+      "pName": "Harddisk",
+      "pDescription": "awesome harddisk for use",
+      "pManufacturer": "Toshiba",
+      "pPrice": 5000,
+      "pQuantity": 2,
+      "pImagePath": "https://5.imimg.com/data5/TU/DL/MY-1127140/toshiba-1gb-desktop-harddisk-drive-500x500.jpg",
+      "id": 42
+    },
+    {
+      "pName": "JK Paper",
+      "pDescription": "best paper for office and home use. enhances printer quality",
+      "pManufacturer": "JK",
+      "pPrice": 250,
+      "pQuantity": 3,
+      "pImagePath": "https://5.imimg.com/data5/WK/VR/MY-56183368/jk-copier-paper-500x500.jpg",
+      "id": 57
     }
   ]
 }

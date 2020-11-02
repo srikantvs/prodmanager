@@ -1,7 +1,52 @@
 <div class="container" *ngIf="pieChartData3.length>0">
-    <div class="row justify-content-center">
-        <div class="col-sm-5 rounded py-3 mx-2">
-            <h2 class="text-center" id="top3">Top 3 Products</h2>
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  <div class="col-sm-2">
+    <div class="dropdown">
+      <button class="btn btn-light text-center" type="button" id="dropdownMenu2" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        <svg width="25px" height="25px" viewBox="0 0 16 16" class="bi bi-filter-square-fill" fill="currentColor"
+          xmlns="http://www.w3.org/2000/svg">
+          <path fill-rule="evenodd"
+            d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm.5 5a.5.5 0 0 0 0 1h11a.5.5 0 0 0 0-1h-11zM4 8.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm2 3a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5z" />
+        </svg>
+      </button>
+      <div class="dropdown-menu px-3  bg-white" aria-labelledby="dropdownMenu2">
+        <form>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" style="width: 20px; height:20px ;" id="istop3checked"
+              name="top3" [(ngModel)]="istop3checked">
+            <span class="pl-3">Top 3 </span>
+          </div>
+
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" style="width: 20px; height:20px ;" id="eachProdCheck"
+              name="eachProdCheck" [(ngModel)]="eachProdCheck">
+            <span  class="pl-3">Product Analytics</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+
+    <div class="row justify-content-center" >
+        <div class="col-sm-5 rounded py-3 mx-2" *ngIf="istop3checked">
+            <h2 id="top3" class="text-center">Top 3 Products</h2>
       <canvas
         baseChart
         [data]="pieChartData3"
@@ -9,10 +54,10 @@
         [chartType]="pieChartType"
         [options]="pieChartOptions"
         [legend]="pieChartLegend"
-      ></canvas>
+        ></canvas>
     </div>
-    <div class="col-sm-5 rounded py-3">
-        <h2 class="text-center" id="topx">Top Products</h2>
+    <div class="col-sm-5 rounded py-3" *ngIf="eachProdCheck">
+        <h2 id="topx" class="text-center">Product Analytics</h2>
       <canvas
         baseChart
         [data]="pieChartData"

@@ -1,11 +1,8 @@
 <div class="row justify-content-center">
   <div class="col-sm-2">
-    <a class="btn btn-success" routerLink="/prods/add">Add</a>
+    <a class="btn btn-success w-100" routerLink="/prods/add">Add</a>
   </div>
-  <div class="col-sm-2">
-    <button type="button" class="btn btn-danger">Delete</button>
-  </div>
-  <div class="col-sm-6">
+  <div class="col-sm-8">
     <form>
       <div class="form-group">
         <input type="text" class="form-control " id="searchItem" aria-describedby="searchItem" placeholder="Search"
@@ -141,10 +138,10 @@
                     <td> {{vProduct.pQuantity}} </td>
                   </tr>
 
-                  <tr>
+                  <!-- <tr> its not needed also it is taking too much space destroying the styling.
                     <td>Image Path</td>
                     <td> {{vProduct.pImagePath}} </td>
-                  </tr>
+                  </tr> -->
 
                 </tbody>
               </table>

@@ -11,6 +11,8 @@ import { AnalyticsService } from '../services/analytics.service';
 })
 export class AnalyticsComponent implements OnInit {
 
+  public istop3checked: boolean = true;
+  public eachProdCheck: boolean = false;
   public pieChartOptions: ChartOptions = {
     responsive: true,
   };
