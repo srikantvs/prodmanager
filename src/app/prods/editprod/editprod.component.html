@@ -26,7 +26,7 @@
                         <td>Description</td>
                         <td><textarea class="form-control" id="desc" aria-describedby="desc"
                                 placeholder="Description" required [(ngModel)]="productXX.pDescription"
-                                name="pDescription" [disabled]="disableMe"></textarea></td>
+                                name="pDescription" [disabled]="disableMe" style="resize: none;"></textarea></td>
                     </tr>
 
                     <tr>
@@ -60,13 +60,13 @@
             <!-- </div> -->
 
             <div class="d-flex flex-row justify-content-between">
-                <button class="btn btn-warning  " (click)="enableDisableMe()">
+                <button type="button" class="btn btn-warning  " (click)="enableDisableMe()">
                     Edit
                 </button>
-                <button *ngIf="!disableMe" type="submit" [disabled]="!prodForm.valid" class="btn btn-success">
+                <button  *ngIf="!disableMe" type="submit" [disabled]="!prodForm.valid" class="btn btn-success">
                     Update
                 </button>
-                <button class="btn btn-danger" (click)="onDelete()">
+                <button type="button" class="btn btn-danger" (click)="onDelete()">
                     Delete
                 </button> 
               </div>   

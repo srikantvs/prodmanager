@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Product } from 'src/app/models/product';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from 'src/app/services/product.service';
@@ -10,7 +10,7 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./editprod.component.css']
 })
 export class EditprodComponent implements OnInit {
-
+  @ViewChild('prodForm', {static: false}) addUserForm:NgForm;
   productXX: Product;
   productXXCopy: Product;
   products: Product[];

@@ -66,10 +66,10 @@
       "id": 1
     },
     {
-      "pName": "Torch",
+      "pName": "Torchg",
       "pDescription": "Perfect lighting solution for any kind of search & rescue operations.",
-      "pManufacturer": "Philips",
-      "pPrice": 99,
+      "pManufacturer": "Honeywell",
+      "pPrice": 200,
       "pQuantity": 125,
       "pImagePath": "/assets/torch.jpeg",
       "id": 3
@@ -138,13 +138,13 @@
       "id": 73
     },
     {
-      "pName": "ffd",
-      "pDescription": "fdd",
-      "pManufacturer": "dfdf",
-      "pPrice": 6,
-      "pQuantity": 5,
-      "pImagePath": "https://in-media.apjonlinecdn.com/wysiwyg/Navigation/spectre.png",
-      "id": 38
+      "pName": "laptop",
+      "pDescription": "good laptop for busniness people",
+      "pManufacturer": "Apple",
+      "pPrice": 29000,
+      "pQuantity": 3,
+      "pImagePath": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Macbook_Air.jpg/1200px-Macbook_Air.jpg",
+      "id": 18
     }
   ]
 }

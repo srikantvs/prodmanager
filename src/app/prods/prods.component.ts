@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { Product } from '../models/product';
 import { ProductService } from '../services/product.service';
 import { Viewprod } from '../models/viewprod';
 import { AnalyticsService } from '../services/analytics.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-prods',
@@ -11,7 +12,7 @@ import { AnalyticsService } from '../services/analytics.service';
   styleUrls: ['./prods.component.css']
 })
 export class ProdsComponent implements OnInit {
-
+  
   products: Product[];
 
   keyItem: string;

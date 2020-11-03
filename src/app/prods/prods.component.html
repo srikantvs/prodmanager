@@ -55,7 +55,7 @@
 <div class="row row-cols-1 row-cols-sm-4">
   <div class="col my-3 w-100" *ngFor="let product of products | search:keyItem">
     <div class="card h-100 rounded shadow px-2 py-2">
-      <img src="{{ product.pImagePath }}" style = "width: 100px; height: 100px;" class="img-thumbnail img-fluid rounded mx-auto" alt="...">
+      <img src="{{ product.pImagePath }}" style = "width: 150px; height: 150px;" class="img-fluid rounded mx-auto" alt="...">
       <div class="card-body">
         <h5 class="card-title">{{ product.pName }}</h5>
         <p class="card-text text-justify text-truncate" *ngIf="isDescChecked"><b>DESC. </b>
@@ -128,7 +128,7 @@
                   </tr>
                   <tr>
                     <td>Description</td>
-                    <td><textarea disabled=true> {{vProduct.pDescription}} </textarea></td>
+                    <td><textarea disabled=true style="width: 150px; height: 100px; resize: none;"> {{vProduct.pDescription}} </textarea></td>
                   </tr>
 
                   <tr>
